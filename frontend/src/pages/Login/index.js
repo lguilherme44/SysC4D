@@ -36,8 +36,6 @@ export default function Login() {
     <>
       <div className="logon-container">
         <section className="form">
-          {/* <img src={Logo} alt="Be The Hero" /> */}
-
           <form onSubmit={handleSubmitApi}>
             <h1>SYSC4D</h1>
             <input
@@ -63,7 +61,6 @@ export default function Login() {
             </Link>
           </form>
         </section>
-        {/* <img src={Logo} alt="Heroes" /> */}
       </div>
     </>
   );
