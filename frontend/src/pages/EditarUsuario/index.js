@@ -26,12 +26,16 @@ export default function EditarUsuario({ match }) {
 
   useEffect(() => {
     async function getUser() {
-      let { data, status, ok } = await api.get(`/usuario/${match.params.id}`);
+      const { data, status, ok, problem } = await api.get(
+        `/usuario/${match.params.id}`
+      );
 
       if (status === 200 && ok) {
         setNome(data.nome);
         setEmail(data.email);
         setUsuario(data);
+      } else {
+        toast.error(problem);
       }
     }
 
@@ -43,17 +47,15 @@ export default function EditarUsuario({ match }) {
 
     setLoading(true);
 
-    const { status, ok, problem } = await api.put(`/usuario/${usuario.id}`, {
+    const { status, ok } = await api.put(`/usuario/${usuario.id}`, {
       nome,
       email,
     });
 
-    console.log(problem);
-
     if (status === 200 && ok) {
       toast.success('Cadastro atualizado com sucesso!');
     } else {
-      toast.error('Problema ao carregar dados da API');
+      toast.error('Problema ao acessar servidor');
     }
 
     setLoading(false);
