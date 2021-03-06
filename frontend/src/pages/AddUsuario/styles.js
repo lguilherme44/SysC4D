@@ -12,7 +12,7 @@ export const Form = styled.form`
     padding: 12px 16px;
     border-radius: 4px;
     border: 1px solid #ddd;
-    font-size: 15px;
+    font-size: 1rem;
     color: #444;
     transition: border-color 0.2s;
   }
