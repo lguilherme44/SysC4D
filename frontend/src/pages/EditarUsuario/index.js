@@ -22,7 +22,6 @@ export default function EditarUsuario({ match }) {
   const [loading, setLoading] = useState(false);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [usuario, setUsuario] = useState({});
 
   useEffect(() => {
     async function getUser() {
@@ -33,7 +32,6 @@ export default function EditarUsuario({ match }) {
       if (status === 200 && ok) {
         setNome(data.nome);
         setEmail(data.email);
-        setUsuario(data);
       } else {
         toast.error(problem);
       }
@@ -47,7 +45,7 @@ export default function EditarUsuario({ match }) {
 
     setLoading(true);
 
-    const { status, ok } = await api.put(`/usuario/${usuario.id}`, {
+    const { status, ok } = await api.put(`/usuario/${match.params.id}`, {
       nome,
       email,
     });
@@ -67,12 +65,6 @@ export default function EditarUsuario({ match }) {
       <List>
         <Form onSubmit={handleSubmitApi}>
           <Container>
-            <Row>
-              <Col>
-                <h3 className="text-muted">Editar Usuário</h3>
-              </Col>
-            </Row>
-
             <ContainerStyle>
               <Row>
                 <Col xs="12" sm="12" md="12" lg="6">

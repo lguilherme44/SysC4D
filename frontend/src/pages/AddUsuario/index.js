@@ -101,7 +101,7 @@ export default class Main extends Component {
             <Container>
               <Row>
                 <Col>
-                  <h4 className="text-muted">Adicionar Usuário</h4>
+                  <h4 className="text-muted">Adicionar</h4>
                 </Col>
               </Row>
 
@@ -158,7 +158,7 @@ export default class Main extends Component {
         <Container>
           <Row>
             <Col xs="12" sm="12" md="12" lg="" xl="">
-              <h4 className="text-muted">Lista de Usuários</h4>
+              <h4 className="text-muted"></h4>
             </Col>
           </Row>
           <ContainerCustom>
