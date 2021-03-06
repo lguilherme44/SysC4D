@@ -14,7 +14,7 @@ function App() {
       <GlobalStyle />
       <ToastContainer
         autoClose={2000}
-        position="bottom-center"
+        position="top-right"
         closeOnClick
         draggable
         className="toast-container"
