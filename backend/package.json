@@ -19,7 +19,6 @@
         "pg": "^7.12.1",
         "pg-hstore": "^2.3.3",
         "sequelize": "^5.18.4",
-        "sqlite3": "^4.1.1",
         "yup": "^0.28.3"
     },
     "devDependencies": {
@@ -28,6 +27,7 @@
         "eslint-config-prettier": "^6.3.0",
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-prettier": "^3.1.0",
+        "mysql2": "^2.2.5",
         "nodemon": "^1.19.2",
         "prettier": "^1.18.2",
         "sequelize-cli": "^5.5.1",
