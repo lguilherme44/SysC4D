@@ -86,3 +86,45 @@ export const List = styled.ul`
     }
   }
 `;
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+export const MainContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem;
+`;
+
+export const ButtonAdd = styled.button`
+  width: 250px;
+  height: 145px;
+  border: 1px solid #b0d235;
+  margin: 1rem;
+  background: #b0d235;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #393b44;
+  font-size: 1rem;
+
+  &:hover {
+    transition: opacity 0.5s all;
+    opacity: 0.5;
+    background: transparent;
+    color: #fff;
+  }
+
+  strong {
+    font-size: 1.1rem;
+    margin: 1rem;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+`;
