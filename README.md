@@ -22,27 +22,27 @@ Construído em NodeJs no Backend e ReactJs no Frontend, pretendo desenvolver o m
 
 # Screenshots
 
-### Register.js
+### Register
 
 ![Register](https://user-images.githubusercontent.com/18725901/122153390-3efa9780-ce39-11eb-82dd-bded34ea5948.png)
 
-### Login.js
+### Login
 
 ![Login](https://user-images.githubusercontent.com/18725901/122153491-7ff2ac00-ce39-11eb-98dd-769b9395ad3d.png)
 
-### Home.js
+### Home
 
 ![Home](https://user-images.githubusercontent.com/18725901/122153555-a284c500-ce39-11eb-9f53-e7bb4079d824.png)
 
-### AddUser.js
+### AddUser
 
 ![Add User](https://user-images.githubusercontent.com/18725901/122153639-c6480b00-ce39-11eb-8f39-856e87f8df5e.png)
 
-### AddProvider - 1.js
+### AddProvider - 1
 
 ![Add Provider 1](https://user-images.githubusercontent.com/18725901/122153860-33f43700-ce3a-11eb-9cb8-37552bab3910.png)
 
-### AddProvider - 2.js
+### AddProvider - 2
 
 ![Add Provider 2](https://user-images.githubusercontent.com/18725901/122153894-44a4ad00-ce3a-11eb-91af-2ad776e7147a.png)
 
