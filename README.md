@@ -24,19 +24,28 @@ Construído em NodeJs no Backend e ReactJs no Frontend, pretendo desenvolver o m
 
 ### Register.js
 
-!(![Home - ToDo](https://user-images.githubusercontent.com/18725901/122153390-3efa9780-ce39-11eb-82dd-bded34ea5948.png))
+!(![Register](https://user-images.githubusercontent.com/18725901/122153390-3efa9780-ce39-11eb-82dd-bded34ea5948.png))
 
 ### Login.js
 
-![Login - ToDo](https://i.imgur.com/BFhVi06.png)
+![Login](https://user-images.githubusercontent.com/18725901/122153491-7ff2ac00-ce39-11eb-98dd-769b9395ad3d.png)
 
 ### Home.js
 
-![Home - ToDo](https://i.imgur.com/jDfDJHT.png)
+![](https://i.imgur.com/jDfDJHT.png)
+![Home](https://user-images.githubusercontent.com/18725901/122153555-a284c500-ce39-11eb-9f53-e7bb4079d824.png)
 
-### Task.js
+### AddUser.js
 
-![Home - ToDo](https://i.imgur.com/5TXUlfY.png)
+![Add User](https://user-images.githubusercontent.com/18725901/122153639-c6480b00-ce39-11eb-8f39-856e87f8df5e.png)
+
+### AddProvider - 1.js
+
+![Add Provider 1](https://user-images.githubusercontent.com/18725901/122153860-33f43700-ce3a-11eb-9cb8-37552bab3910.png)
+
+### AddProvider - 2.js
+
+![Add Provider 2](https://user-images.githubusercontent.com/18725901/122153894-44a4ad00-ce3a-11eb-91af-2ad776e7147a.png)
 
 ## Como rodar a aplicação
 
@@ -56,12 +65,11 @@ Config IP in api file: ./src/services/api.js
 
 ```2 - yarn start```
 
-### Mobile
-Config IP in api file: ./src/services/api.js
+Habilitar cors para funcionamento do cadastro automático de fornecedores
 
-```1 - yarn```
+![cors](https://user-images.githubusercontent.com/18725901/122154212-d6acb580-ce3a-11eb-9b40-8c338d521fbb.png)
 
-```2 - yarn start```
+É necessário um passo a mais para poder funcionar o cadastro de fornecedor automático, depois que a aplicação estiver em execução, copie este link: https://cors-anywhere.herokuapp.com/corsdemo, cole em seu navegador e clique no botão: Request temporary access to the demo server, conforme print acima.
 
 #### Dúvidas e/ou sugestões? 
 [Guilherme Lellis](mailto:lguilherme44@gmail.com)
