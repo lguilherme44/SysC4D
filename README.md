@@ -24,7 +24,7 @@ Construído em NodeJs no Backend e ReactJs no Frontend, pretendo desenvolver o m
 
 ### Register.js
 
-!(![Register](https://user-images.githubusercontent.com/18725901/122153390-3efa9780-ce39-11eb-82dd-bded34ea5948.png))
+![Register](https://user-images.githubusercontent.com/18725901/122153390-3efa9780-ce39-11eb-82dd-bded34ea5948.png)
 
 ### Login.js
 
@@ -32,7 +32,6 @@ Construído em NodeJs no Backend e ReactJs no Frontend, pretendo desenvolver o m
 
 ### Home.js
 
-![](https://i.imgur.com/jDfDJHT.png)
 ![Home](https://user-images.githubusercontent.com/18725901/122153555-a284c500-ce39-11eb-9f53-e7bb4079d824.png)
 
 ### AddUser.js
