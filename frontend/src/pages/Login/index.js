@@ -1,34 +1,46 @@
-import React, { useState } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { useHistory, Link } from "react-router-dom";
 
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
-import api from '../../services/api';
-import { FiLogIn } from 'react-icons/fi';
+import api from "../../services/api";
+import { FiLogIn } from "react-icons/fi";
 
-import './styles.css';
-import '../../styles/global.css';
+import "./styles.css";
+import "../../styles/global.css";
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const history = useHistory();
 
   async function handleSubmitApi(e) {
     e.preventDefault();
 
-    try {
-      const response = await api.post('sessions', { email, password });
+    const { data, problem } = await api.post("sessions", {
+      email,
+      password,
+    });
 
-      localStorage.setItem('userName', response.data.user.nome);
-      localStorage.setItem('userEmail', email);
-      localStorage.setItem('userToken', response.data.token);
+    if (problem && !data) {
+      toast.error(problem);
+      return;
+    }
 
-      toast(`Bem Vindo(a), ${response.data.user.nome}.`);
+    if (data.error) {
+      // console.log(data);
+      toast.error(data.error);
+      return;
+    }
 
-      history.push('/home');
-    } catch (error) {
-      toast.error('Usuário e/ou Password invalidos.');
+    if (data) {
+      localStorage.setItem("userName", data.user.nome);
+      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userToken", data.token);
+
+      toast.success(`Bem Vindo(a), ${data.user.nome}.`);
+
+      history.push("/home");
     }
   }
 
@@ -41,14 +53,14 @@ export default function Login() {
             <input
               placeholder="E-mail"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <button className="button" type="submit">

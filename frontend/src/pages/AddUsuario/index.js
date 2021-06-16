@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // font-awesome
-import { FaSpinner, FaSave } from 'react-icons/fa';
+import { FaSpinner, FaSave } from "react-icons/fa";
 
 // reactstrap
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 
 // toastify
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 // chamada da api
-import api from '../../services/api';
+import api from "../../services/api";
 
 // import Container from '../../components/Container';
 
-import { Form, SubmitButton, List } from './styles';
-import ContainerStyle from '../../components/Container';
-import ContainerCustom from '../../components/ContainerCustom';
-import TableUsuario from '../../components/TableUsuario';
-import Header from '../../components/Header';
+import { Form, SubmitButton, List } from "./styles";
+import ContainerStyle from "../../components/Container";
+import ContainerCustom from "../../components/ContainerCustom";
+import TableUsuario from "../../components/TableUsuario";
+import Header from "../../components/Header";
 
 export default class Main extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ export default class Main extends Component {
     usuarios: [],
   };
 
-  handleValuesChange = e => {
+  handleValuesChange = (e) => {
     this.setState({
       data: {
         ...this.state.data,
@@ -43,7 +43,7 @@ export default class Main extends Component {
     });
   };
 
-  handleSubmitApi = async e => {
+  handleSubmitApi = async (e) => {
     e.preventDefault();
     try {
       const dados = this.state.data;
@@ -57,7 +57,7 @@ export default class Main extends Component {
       });
 
       // se sucesso
-      toast.success('Cadastro realizado com sucesso!');
+      toast.success("Cadastro realizado com sucesso!");
 
       // limpa os dados dos input's
       this.setState({ data: {} });
@@ -81,7 +81,7 @@ export default class Main extends Component {
 
   async getAllUser() {
     try {
-      let { data } = await api.get('/usuario/all');
+      let { data } = await api.get("/usuario/all");
       this.setState({ usuarios: data });
     } catch (error) {
       // toast.error(
@@ -101,7 +101,7 @@ export default class Main extends Component {
             <Container>
               <Row>
                 <Col>
-                  <h4 className="text-muted">Adicionar</h4>
+                  <h4 className="text-muted">Adicionar Usuário</h4>
                 </Col>
               </Row>
 
@@ -112,7 +112,7 @@ export default class Main extends Component {
                     <input
                       className="label"
                       type="text"
-                      value={data.nome || ''}
+                      value={data.nome || ""}
                       name="nome"
                       onChange={this.handleValuesChange}
                       required
@@ -124,7 +124,7 @@ export default class Main extends Component {
                     <input
                       className="label"
                       type="text"
-                      value={data.email || ''}
+                      value={data.email || ""}
                       name="email"
                       onChange={this.handleValuesChange}
                       required
@@ -135,7 +135,7 @@ export default class Main extends Component {
                     <label>Password:</label>
                     <input
                       type="password"
-                      value={data.password || ''}
+                      value={data.password || ""}
                       name="password"
                       onChange={this.handleValuesChange}
                       required
